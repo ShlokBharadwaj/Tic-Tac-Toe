@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Domine:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;    
+}
+
+
+nav{
+    background-color: black;
+    color: rgb(255, 255, 0);
+    height: 6.9rem;
+    font-size: 3.6rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1.2rem;
+    font-family: 'Domine', serif;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+/*
+height is set to auto.
+Setting both height and width to auto could result in the GIF to resize and lose ratio.
+*/
+img.winning-gif {
+    width: 12.0rem;
+    height: auto;
+}
+
+.gameContainer{
+    display:flex;
+    justify-content: center;
+    margin-top: 5.0rem;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Cinzel', serif;
+    position: relative;
+}
+
+.box{
+    border: .2rem solid black;
+    font-size: 9vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: rgba(246, 235, 237, 0.802);
+}
+
+.info {
+    font-size: 1.8rem;
+}
+
+.gameInfo{
+    padding: 0 3.4rem; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gameInfo h1{
+    font-size: 2.5rem;
+}
+
+.imgbox img{
+    margin: 2mm;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset {
+    margin: 0 2.3rem;
+    padding: .3rem .8rem;
+    background: rgb(226, 144, 144);
+    border-radius: .6rem;
+    cursor: pointer;
+    font-family: 'Domine', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.line {
+    background-color: black;
+    width: 0;
+    height: .3rem;
+    position: absolute;
+    background-color: #911d91;
+    transition: width 1s step-end;
+}
+
+@media screen and (max-width: 85.0rem){
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 3.4rem;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container {
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
+}
